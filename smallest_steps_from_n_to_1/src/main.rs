@@ -1,15 +1,23 @@
 /*
-    Given a positive integer N, find the smallest number of steps it will take to reach 1.
+    * Given a positive integer N, find the smallest number of steps it will take to reach 1.
+    * There are two kinds of permitted steps:
+    * You may decrement N to N - 1.
+    * If a * b = N, you may decrement N to the larger of a and b.
+    * For example, given 100, you can reach 1 in five steps with the following route: 100 -> 10 -> 9 -> 3 -> 2 -> 1.
+ */
+use std::env;
 
-    There are two kinds of permitted steps:
-
-    You may decrement N to N - 1.
-    If a * b = N, you may decrement N to the larger of a and b.
-    For example, given 100, you can reach 1 in five steps with the following route: 100 -> 10 -> 9 -> 3 -> 2 -> 1.
-*/
 
 fn main() {
-    let n = 100;
+    let args: Vec<String> = env::args().collect();
+    // Check there is one argument
+    if args.len() != 2 {
+        println!("Usage: cargo run <n>");
+        return;
+    }
+
+    let n = args[1].parse::<u64>().expect("n must be an integer");
+
     let mut path = Path::new(vec![n]);
     path.flesh_out();
     println!("{}: {:?}, {} steps", n, path.steps, path.steps.len());

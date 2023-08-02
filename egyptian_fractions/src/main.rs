@@ -1,3 +1,8 @@
+/*
+    * Egyptian Fractions
+    * Represent a fraction as a sum of fractions with numerator 1
+ */
+
 use std::env;
 use num_rational::Rational32 as Rational;
 
