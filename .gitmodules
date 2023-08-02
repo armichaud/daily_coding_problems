@@ -1,6 +1,0 @@
-[submodule "smallest_steps_from_n_to_1"]
-	path = smallest_steps_from_n_to_1
-	url = ./smallest_steps_from_n_to_1
-[submodule "egyptian_fractions"]
-	path = egyptian_fractions
-	url = ./egyptian_fractions

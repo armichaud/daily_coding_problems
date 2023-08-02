@@ -1,0 +1,1 @@
+/Users/alexanderrodionmichaud/code/daily_coding_problems/smallest_steps_from_n_to_1/target/debug/smallest_steps_from_n_to_1: /Users/alexanderrodionmichaud/code/daily_coding_problems/smallest_steps_from_n_to_1/src/main.rs
